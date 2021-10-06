@@ -1,0 +1,255 @@
+:root {
+    --colorFondo: seashell;
+    --colorCards: white;
+    --colorBoton: rgb(187, 255, 209);
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #125b51;
+}
+
+* {
+    background-color: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.card__boton {
+    min-width: 100px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #F4C022;
+    ;
+    background: #F4C022;
+    ;
+    font-size: .8rem;
+}
+
+.card__boton:hover {
+    background: #fff;
+    color: #F4C022;
+}
+
+.btn-flotante {
+    display: flex;
+    outline: none;
+    background: #F4C022;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    height: 40px;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-left: 1rem;
+
+}
+
+.card {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.205);
+}
+
+.btn-flotante:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+    background: #F4C022;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-flotante {
+        font-size: 14px;
+        padding: 12px 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.card__nombre {
+    background-color: var(--colorCards);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+    width: 90%;
+}
+
+
+
+.card__datos {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    padding-bottom: .3rem;
+    padding-top: .3rem;
+    background-color: var(--colorCards);
+}
+
+.card__posicion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__precio {
+    font-size: 1rem;
+    background-color: var(--colorCards);
+
+}
+
+
+.card input {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--colorCards);
+    border: solid black;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+
+}
+
+.fondo__grid {
+    padding: 3rem;
+    background-color: #e3e6e83b;
+    border-radius: 3%;
+    box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.205);
+    margin: 7rem 1rem 1rem 1rem;
+}
+
+.img__contenedor {
+    max-width: 90%;
+    height: 13rem;
+    display: flex;
+    margin-top: .2rem;
+    border-bottom: solid rgb(212, 205, 205) .1px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: .5rem;
+    }
+}
+
+.card__nombre {
+    font-size: 1rem;
+}
+
+
+.carrito__contendor {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 10%;
+    z-index: 90;
+    left: 20%;
+}
+
+.carrito {
+    background: #cececbf0;
+    border-radius: 5%;
+    padding: .5rem;
+    display: none;
+
+}
+
+#filtros {
+    display: none;
+}
+
+.btn__filtro {
+    min-width: 100px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #F4C022;
+    ;
+    background: #F4C022;
+    ;
+    font-size: .8rem;
+}
+
+.btn__filtro:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+    background: #fff;
+    color: #F4C022;
+}
+
+.footer {
+    height: 25rem;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo__contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    height: 5rem;
+    border-bottom: 3px solid black;
+    position: fixed;
+    top: 0%;
+    z-index: 99;
+}
+
+.mapa {
+    border: 1px solid white;
+    padding: .4rem;
+    background-color: black;
+}
